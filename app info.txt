@@ -1,0 +1,8 @@
+web app will have a landin page that displays all the info
+-portal sign up
+-portal login
+-about
+-contact
+
+portal
+##will contain details found in the docs

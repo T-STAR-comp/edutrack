@@ -1,0 +1,62 @@
+.notFoundWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #f9fafb, #e0f2fe);
+    padding: 2rem;
+  }
+  
+  .notFoundCard {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 3rem;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    animation: fadeIn 0.6s ease-in-out;
+    max-width: 420px;
+    width: 100%;
+  }
+  
+  .notFoundCard h1 {
+    font-size: 5rem;
+    color: #1E3A8A;
+    margin-bottom: 1rem;
+    font-weight: 900;
+  }
+  
+  .notFoundCard p {
+    font-size: 1.25rem;
+    color: #374151;
+    margin-bottom: 2rem;
+  }
+  
+  .notFoundLink {
+    display: inline-block;
+    background: #1E3A8A;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+  }
+  
+  .notFoundLink:hover {
+    background: linear-gradient(to right, #1E3A8A, #3b82f6);
+    transform: scale(1.03);
+  }
+  
+  /* Already included earlier */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
