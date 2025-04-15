@@ -55,7 +55,7 @@ const Landing = () => {
       </section>
 
       <footer className={styles.footer}>
-        <p>&copy; 2025 Edu Track Malawi. Designed with love and logic.</p>
+        <p>&copy; 2025 Edu Track Malawi. Powered By OASIS.</p>
       </footer>
     </div>
   );
