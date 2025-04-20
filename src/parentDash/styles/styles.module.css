@@ -1,0 +1,110 @@
+.main_div {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 2rem;
+    background-color: #f9fafb;
+    color: #1f2937;
+  }
+  
+  .top_bar {
+    background-color: #1E3A8A;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .heading {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .section_heading {
+    font-size: 1.4rem;
+    color: #1E3A8A;
+    margin-bottom: 0.5rem;
+  }
+  
+  .student_info,
+  .fees_balance,
+  .calendar_section,
+  .messages_section,
+  .academic_insights_section {
+    margin-bottom: 2rem;
+  }
+  
+  .student_card,
+  .balance_card,
+  .calendar_card,
+  .messages_card,
+  .academic_insights_card,
+  .test_performance_card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin-top: 0.5rem;
+  }
+  
+  .scores_table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .scores_table th,
+  .scores_table td {
+    border: 1px solid #d1d5db;
+    padding: 0.75rem 1rem;
+    text-align: left;
+  }
+  
+  .scores_table th {
+    background-color: #f3f4f6;
+    color: #374151;
+    font-weight: 600;
+  }
+  
+  .scores_table tr:nth-child(even) {
+    background-color: #f9fafb;
+  }
+  
+  .pay_button,
+  .view_messages_button,
+  .logout_button {
+    background-color: #1E3A8A;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pay_button:hover,
+  .view_messages_button:hover,
+  .logout_button:hover {
+    background-color: #153174;
+  }
+  
+  .chart_section {
+    margin-top: 2rem;
+  }
+  
+  .logout_section {
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .footer {
+    margin-top: 4rem;
+    text-align: center;
+    color: #6b7280;
+    font-size: 0.9rem;
+    padding: 2rem 0 1rem;
+    border-top: 1px solid #e5e7eb;
+  }
+  
