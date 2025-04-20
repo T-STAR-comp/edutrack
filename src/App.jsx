@@ -16,7 +16,7 @@ function App() {
         <Route path='*' element={<Notfound/>} />
         <Route path='/' element={<Landing/>} />
         <Route path='/contactUs' element={<ContactPage/>} />
-        <Route path='/Auth' element={<Auth/>} />\
+        <Route path='/Auth' element={<Auth/>} />
         <Route path='/dashboard' element={<ParentDash/>} />
       </Routes>
     </>
