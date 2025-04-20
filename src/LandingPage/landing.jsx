@@ -2,6 +2,11 @@ import { Link } from 'react-router-dom';
 import styles from './styles/styles.module.css';
 
 const Landing = () => {
+
+  const toHome = () => {
+    window.location.href = ('/dashboard');
+  };
+
   return (
     <div className={styles.main_div}>
       <header className={styles.header}>
@@ -26,7 +31,7 @@ const Landing = () => {
 
       <section id="features" className={styles.features}>
         <div className={styles.glassCard}>
-          <h3>🎓 Student Dashboard</h3>
+          <h3 onClick={toHome}>🎓 Student Dashboard</h3>
           <p>Monitor academic performance, attendance, and growth in real-time.</p>
         </div>
         <div className={styles.glassCard}>
