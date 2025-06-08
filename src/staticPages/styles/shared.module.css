@@ -1,0 +1,199 @@
+.pageContainer {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  color: #111827;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.heroSection {
+  text-align: center;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+}
+
+.heroSection h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #1E3A8A 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.heroSection p {
+  font-size: 1.25rem;
+  color: #4B5563;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.contentSection {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.contentSection h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #1E3A8A 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contentSection p {
+  color: #4B5563;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(30, 58, 138, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.card p {
+  color: #6B7280;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #1E3A8A;
+  margin-bottom: 1rem;
+}
+
+.form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #1f2937;
+  transition: all 0.3s ease;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.button {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  background: linear-gradient(135deg, #1E3A8A 0%, #3b82f6 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(30, 58, 138, 0.2);
+}
+
+.buttonSecondary {
+  background: white;
+  color: #1E3A8A;
+  border: 2px solid #1E3A8A;
+}
+
+.buttonSecondary:hover {
+  background: #f0f9ff;
+}
+
+@media (max-width: 768px) {
+  .heroSection h1 {
+    font-size: 2.5rem;
+  }
+
+  .heroSection p {
+    font-size: 1.125rem;
+  }
+
+  .contentSection {
+    padding: 2rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .pageContainer {
+    padding: 1rem;
+  }
+
+  .heroSection {
+    padding: 3rem 1rem;
+  }
+
+  .contentSection h2 {
+    font-size: 1.75rem;
+  }
+} 

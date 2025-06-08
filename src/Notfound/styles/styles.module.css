@@ -3,60 +3,144 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: linear-gradient(to bottom right, #f9fafb, #e0f2fe);
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
     padding: 2rem;
   }
   
   .notFoundCard {
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(20px);
-    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
     padding: 3rem;
     text-align: center;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-    animation: fadeIn 0.6s ease-in-out;
-    max-width: 420px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    max-width: 480px;
     width: 100%;
   }
   
-  .notFoundCard h1 {
-    font-size: 5rem;
+  .errorIcon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 2rem;
+  }
+  
+  .icon {
+    width: 100%;
+    height: 100%;
     color: #1E3A8A;
-    margin-bottom: 1rem;
+  }
+  
+  .notFoundCard h1 {
+    font-size: 6rem;
+    background: linear-gradient(135deg, #1E3A8A 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    line-height: 1;
     font-weight: 900;
   }
   
+  .subtitle {
+    font-size: 1.75rem;
+    color: #1f2937;
+    margin: 1rem 0;
+    font-weight: 700;
+  }
+  
   .notFoundCard p {
-    font-size: 1.25rem;
-    color: #374151;
+    font-size: 1.125rem;
+    color: #4b5563;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  
+  .buttonGroup {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
     margin-bottom: 2rem;
   }
   
-  .notFoundLink {
-    display: inline-block;
-    background: #1E3A8A;
-    color: white;
-    padding: 0.75rem 1.5rem;
+  .primaryButton,
+  .secondaryButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.5rem;
     border-radius: 12px;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .primaryButton {
+    background: linear-gradient(135deg, #1E3A8A 0%, #3b82f6 100%);
+    color: white;
+    text-decoration: none;
+    border: none;
+  }
+  
+  .secondaryButton {
+    background: white;
+    color: #1E3A8A;
+    border: 2px solid #1E3A8A;
+  }
+  
+  .primaryButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(30, 58, 138, 0.2);
+  }
+  
+  .secondaryButton:hover {
+    transform: translateY(-2px);
+    background: #f0f9ff;
+  }
+  
+  .buttonIcon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  
+  .helpText {
+    color: #6b7280;
+    font-size: 0.875rem;
+  }
+  
+  .helpLink {
+    color: #1E3A8A;
     text-decoration: none;
     font-weight: 500;
-    transition: 0.3s ease;
+    transition: color 0.3s ease;
   }
   
-  .notFoundLink:hover {
-    background: linear-gradient(to right, #1E3A8A, #3b82f6);
-    transform: scale(1.03);
+  .helpLink:hover {
+    color: #3b82f6;
+    text-decoration: underline;
   }
   
-  /* Already included earlier */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: scale(0.95);
+  @media (max-width: 640px) {
+    .notFoundCard {
+      padding: 2rem;
     }
-    to {
-      opacity: 1;
-      transform: scale(1);
+  
+    .notFoundCard h1 {
+      font-size: 4rem;
+    }
+  
+    .subtitle {
+      font-size: 1.5rem;
+    }
+  
+    .buttonGroup {
+      flex-direction: column;
+    }
+  
+    .primaryButton,
+    .secondaryButton {
+      width: 100%;
+      justify-content: center;
     }
   }
   

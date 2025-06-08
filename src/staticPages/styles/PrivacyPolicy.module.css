@@ -1,0 +1,176 @@
+.pageContainer {
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #f9fafb;
+}
+
+.privacyHero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #1E3A8A 0%, #3b82f6 100%);
+  color: white;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+}
+
+.heroIcon {
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.introduction {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.keyPoints {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+  padding: 0 1rem;
+}
+
+.keyPoint {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #1E3A8A;
+  margin-bottom: 1rem;
+}
+
+.policySection {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.policySection h2 {
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.policySection ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.policySection li {
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.policySection li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #1E3A8A;
+}
+
+.dataRights {
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+  padding: 0 1rem;
+}
+
+.rightsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.rightCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.rightCard h3 {
+  color: #1E3A8A;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.rightCard p {
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.updates, .consent {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+}
+
+.updates h2, .consent h2 {
+  color: #1f2937;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.updates p, .consent p {
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.contactSection {
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.contactInfo {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #4b5563;
+}
+
+@media (max-width: 768px) {
+  .privacyHero {
+    padding: 3rem 1rem;
+  }
+
+  .heroIcon {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .keyPoints {
+    grid-template-columns: 1fr;
+  }
+
+  .rightsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .policySection {
+    padding: 1.5rem;
+  }
+} 

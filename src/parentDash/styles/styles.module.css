@@ -3,34 +3,159 @@
     padding: 2rem;
     background-color: #f9fafb;
     color: #1f2937;
+    min-height: 100vh;
   }
   
   .top_bar {
-    background-color: #1E3A8A;
-    color: white;
+    background-color: white;
+    color: #1f2937;
     padding: 1.5rem;
     border-radius: 12px;
     margin-bottom: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .top_bar_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .top_bar_actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .notifications {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .notification_badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #ef4444;
+    color: white;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    min-width: 20px;
     text-align: center;
   }
   
+  .notifications_dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 320px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+    padding: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .notification_item {
+    padding: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .notification_item:last-child {
+    border-bottom: none;
+  }
+  
+  .notification_item h4 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin: 0 0 0.25rem 0;
+  }
+  
+  .notification_item p {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin: 0 0 0.25rem 0;
+  }
+  
+  .notification_item small {
+    font-size: 0.75rem;
+    color: #9ca3af;
+  }
+  
+  .user_profile {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #1E3A8A;
+  }
+  
+  .tabs {
+    display: flex;
+    gap: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 0.5rem;
+  }
+  
+  .tab {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: none;
+    color: #6b7280;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .active_tab {
+    color: #1E3A8A;
+    border-bottom: 2px solid #1E3A8A;
+  }
+  
   .heading {
-    font-size: 2rem;
+    font-size: 1.875rem;
     font-weight: 600;
     margin: 0;
+    color: #1f2937;
   }
   
   .section_heading {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
+    color: #1f2937;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .section_icon {
+    width: 1.5rem;
+    height: 1.5rem;
     color: #1E3A8A;
-    margin-bottom: 0.5rem;
+  }
+  
+  .overview_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
   }
   
   .student_info,
   .fees_balance,
   .calendar_section,
   .messages_section,
-  .academic_insights_section {
+  .academic_insights_section,
+  .attendance_section,
+  .finance_section {
     margin-bottom: 2rem;
   }
   
@@ -39,72 +164,419 @@
   .calendar_card,
   .messages_card,
   .academic_insights_card,
-  .test_performance_card {
+  .test_performance_card,
+  .attendance_card,
+  .finance_card {
     background-color: white;
-    border-radius: 10px;
-    padding: 1rem 1.5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    margin-top: 0.5rem;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .card_title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .fees_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .fees_item {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f8fafc;
+    border-radius: 8px;
+  }
+  
+  .fees_label {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin: 0 0 0.5rem 0;
+  }
+  
+  .fees_amount {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+  }
+  
+  .calendar_grid {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .calendar_item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #f8fafc;
+    border-radius: 8px;
+  }
+  
+  .calendar_icon {
+    width: 2rem;
+    height: 2rem;
+    color: #1E3A8A;
+  }
+  
+  .event_date {
+    font-weight: 600;
+    margin: 0 0 0.25rem 0;
+  }
+  
+  .event_name {
+    color: #6b7280;
+    margin: 0;
+  }
+  
+  .messages_list {
+    margin-bottom: 1rem;
+  }
+  
+  .message_item {
+    padding: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .message_item:last-child {
+    border-bottom: none;
   }
   
   .scores_table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
   }
   
   .scores_table th,
   .scores_table td {
-    border: 1px solid #d1d5db;
     padding: 0.75rem 1rem;
     text-align: left;
+    border-bottom: 1px solid #e5e7eb;
   }
   
   .scores_table th {
-    background-color: #f3f4f6;
-    color: #374151;
+    background-color: #f8fafc;
     font-weight: 600;
+    color: #4b5563;
   }
   
-  .scores_table tr:nth-child(even) {
-    background-color: #f9fafb;
+  .status {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+  
+  .pass {
+    background-color: #dcfce7;
+    color: #15803d;
+  }
+  
+  .fail {
+    background-color: #fee2e2;
+    color: #b91c1c;
+  }
+  
+  .trend {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  .positive {
+    color: #15803d;
+  }
+  
+  .negative {
+    color: #b91c1c;
+  }
+  
+  .neutral {
+    color: #6b7280;
+  }
+  
+  .chart_section {
+    margin: 2rem 0;
+  }
+  
+  .chart_section h4 {
+    margin-bottom: 1rem;
+    color: #4b5563;
+  }
+  
+  .attendance_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .attendance_chart {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    margin: 0 auto;
+  }
+  
+  .attendance_percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .attendance_percentage h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+    color: #1E3A8A;
+  }
+  
+  .attendance_percentage p {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin: 0;
+  }
+  
+  .attendance_stats {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .stat_item {
+    padding: 1rem;
+    background-color: #f8fafc;
+    border-radius: 8px;
+  }
+  
+  .stat_item h4 {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin: 0 0 0.5rem 0;
+  }
+  
+  .stat_item p {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+  }
+  
+  .finance_grid {
+    display: grid;
+    gap: 2rem;
+  }
+  
+  .fees_summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .summary_card {
+    padding: 1.5rem;
+    background-color: #f8fafc;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .summary_card h4 {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin: 0 0 0.5rem 0;
+  }
+  
+  .summary_card p {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+  }
+  
+  .payment_history {
+    margin: 2rem 0;
+  }
+  
+  .payment_table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .payment_table th,
+  .payment_table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .payment_table th {
+    background-color: #f8fafc;
+    font-weight: 600;
+    color: #4b5563;
+  }
+  
+  .status_completed {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    background-color: #dcfce7;
+    color: #15803d;
+  }
+  
+  .payment_actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
   }
   
   .pay_button,
   .view_messages_button,
-  .logout_button {
+  .download_button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     background-color: #1E3A8A;
     color: white;
     border: none;
-    padding: 0.6rem 1.2rem;
-    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
     border-radius: 8px;
+    font-weight: 500;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.2s ease;
   }
   
-  .pay_button:hover,
-  .view_messages_button:hover,
-  .logout_button:hover {
-    background-color: #153174;
+  .download_button {
+    background-color: #f3f4f6;
+    color: #1f2937;
   }
   
-  .chart_section {
-    margin-top: 2rem;
+  .button_icon {
+    width: 1.25rem;
+    height: 1.25rem;
   }
   
   .logout_section {
     text-align: center;
     margin-top: 3rem;
   }
-
+  
+  .logout_button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #fee2e2;
+    color: #b91c1c;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
   .footer {
     margin-top: 4rem;
     text-align: center;
     color: #6b7280;
-    font-size: 0.9rem;
+    font-size: 0.875rem;
     padding: 2rem 0 1rem;
     border-top: 1px solid #e5e7eb;
+  }
+  
+  @media (max-width: 768px) {
+    .main_div {
+      padding: 1rem;
+    }
+    
+    .top_bar {
+      padding: 1rem;
+    }
+    
+    .top_bar_content {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+    
+    .tabs {
+      overflow-x: auto;
+      padding-bottom: 0.5rem;
+      margin: 0 -1rem;
+      padding: 0 1rem 0.5rem;
+    }
+    
+    .overview_grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .fees_grid,
+    .fees_summary {
+      grid-template-columns: 1fr;
+    }
+    
+    .attendance_grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .payment_actions {
+      flex-direction: column;
+    }
+    
+    .payment_table {
+      font-size: 0.875rem;
+    }
+    
+    .table_container {
+      overflow-x: auto;
+      margin: 0 -1rem;
+      padding: 0 1rem;
+    }
+  }
+  
+  .charts_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .chart_section {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chart_container {
+    position: relative;
+    width: 100%;
+    height: 300px !important;
+    margin: 0 auto;
   }
   
