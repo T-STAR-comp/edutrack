@@ -1,4 +1,7 @@
 .main_div {
+  box-sizing: border-box;
+  overflow-x: auto;
+  max-width: 100vw;
   background-color: white;
   border-radius: 0.75rem;
   padding: 1.5rem;
@@ -228,6 +231,7 @@
 
 .table_container {
   overflow-x: auto;
+  max-width: 100vw;
 }
 
 .table {
